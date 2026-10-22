@@ -1,0 +1,11 @@
+.minimapOuterContainer {
+  position: absolute;
+  left: 30%;
+  bottom: 70%;
+}
+
+.loadingSpinnerContainer {
+  position: absolute;
+  left: 3em;
+  top: -2.5em;
+}

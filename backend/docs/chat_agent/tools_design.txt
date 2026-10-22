@@ -1,0 +1,16 @@
+Tools overview
+Create a new node from the current state
+Name: tools/create-new-node
+Parameters: 
+    - node_type: string, "data node" | "computation node"
+    - node_name: string
+    - 
+
+tools/get-analysis-info
+tools/get-current-node-info
+tools/get-whole-tree-info
+tools/get-whole-branch-info
+tools/get-dataset-list
+tools/capture_data
+tools/auto-genie
+tools/fix-bug

@@ -1,0 +1,18 @@
+.highlighted-task {
+  animation: highlightPulse 3s ease-in-out;
+}
+
+@keyframes highlightPulse {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.02);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

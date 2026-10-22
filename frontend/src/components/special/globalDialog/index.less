@@ -1,0 +1,87 @@
+.geneset-checkbox {
+  .ant-checkbox-wrapper {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(to bottom, #83a0ff 0%, #0012df 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.prompt-sentence {
+  color: rgb(240, 242, 245);
+  font-style: italic;
+  display: block;
+  font-size: 1px;
+}
+
+.uploadContainer {
+  margin: 20px;
+  overflow-x: auto;
+  background-color: rgb(255, 255, 255);
+
+  &.noDragging {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+.dragging {
+  border: 2px dashed rgb(172, 172, 172);
+}
+
+.addFilesButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: rgba(47, 84, 235, 1);
+  font-size: 14px;
+  white-space: nowrap;
+
+  &:disabled {
+    color: rgba(47, 84, 235, 0.5);
+    cursor: not-allowed;
+  }
+}
+
+.labelRequired {
+  color: red;
+  margin-right: 4px;
+}
+
+.uploadButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: rgba(47, 84, 235, 1);
+}
+
+.deleteButton:disabled {
+  color: rgba(231, 134, 134, 0.5);
+  cursor: not-allowed;
+}
+
+.uploadDraggerContainer {
+  position: relative;
+  padding: 1.2rem;
+
+  .ant-upload-drag {
+    &.dragging {
+      border: 2px dashed rgb(172, 172, 172);
+    }
+
+    &.noDragging {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+}
+
+.uploadInfoForm {
+  margin-top: 20px;
+  padding: 0 1.2rem;
+}

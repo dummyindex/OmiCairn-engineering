@@ -1,0 +1,59 @@
+from constants.common import AugmentedEnum
+import os
+
+
+class ComputationState(AugmentedEnum):
+    PENDING = "pending"
+    QUEUING = "queuing"
+    RUNNING = "running"
+    FINISHED = "finished"
+    FAILED = "failed"
+    CANCELLED = "cancelled"
+
+
+PYTHON_JOB_DEFINITION_SCANPY = os.environ.get("PYTHON_JOB_DEFINITION_SCANPY")
+PYTHON_JOB_DEFINITION_DYN = os.environ.get("PYTHON_JOB_DEFINITION_DYN")
+PYTHON_JOB_DEFINITION_MEBOCOST = os.environ.get(
+    "PYTHON_JOB_DEFINITION_MEBOCOST")
+PYTHON_JOB_DEFINITION_SCVELO = os.environ.get("PYTHON_JOB_DEFINITION_SCVELO")
+PYTHON_JOB_DEFINITION_SCFATES = os.environ.get("PYTHON_JOB_DEFINITION_SCFATES")
+
+PYTHON_JOB_DEFINITION_DEFAULT = os.environ.get("PYTHON_JOB_DEFINITION_DEFAULT")
+PYTHON_JOB_DEFINITION_V2 = os.environ.get("PYTHON_JOB_DEFINITION_V2")
+
+PYTHON_JOB_DEFINITION_DEFAULT_V2 = os.environ.get("PYTHON_JOB_DEFINITION_DEFAULT_V2")
+PYTHON_JOB_DEFINITION_LARGE_DEFAULT_V2 = os.environ.get("PYTHON_JOB_DEFINITION_LARGE_DEFAULT_V2")
+PYTHON_JOB_DEFINITION_SCANPY_V2 = os.environ.get("PYTHON_JOB_DEFINITION_SCANPY_V2")
+PYTHON_JOB_DEFINITION_DYN_V2 = os.environ.get("PYTHON_JOB_DEFINITION_DYN_V2")
+PYTHON_JOB_DEFINITION_MEBOCOST_V2 = os.environ.get("PYTHON_JOB_DEFINITION_MEBOCOST_V2")
+PYTHON_JOB_DEFINITION_SCVELO_V2 = os.environ.get("PYTHON_JOB_DEFINITION_SCVELO_V2")
+PYTHON_JOB_DEFINITION_SCFATES_V2 = os.environ.get("PYTHON_JOB_DEFINITION_SCFATES_V2")
+
+R_JOB_DEFINITION = os.environ.get("R_JOB_DEFINITION")
+R_JOB_DEFINITION_V2 = os.environ.get("R_JOB_DEFINITION_V2")
+R_JOB_DEFINITION_V2_METABOANALYST = os.environ.get("R_JOB_DEFINITION_V2_METABOANALYST")
+BASH_JOB_DEFINITION = os.environ.get("BASH_JOB_DEFINITION")
+
+CLAUDE_CODE_JOB_DEFINITION = os.environ.get("CLAUDE_CODE_JOB_DEFINITION", "omicairn-claude-code")
+
+CLAUDE_CODE_EC2_JOB_QUEUE = os.environ.get(
+    "CLAUDE_CODE_EC2_JOB_QUEUE", "claude-code-ec2-queue"
+)
+CLAUDE_CODE_EC2_JOB_DEFINITION = os.environ.get(
+    "CLAUDE_CODE_EC2_JOB_DEFINITION", "omicairn-claude-code-ec2"
+)
+
+JOB_QUEUE = os.environ.get("JOB_QUEUE")
+LARGE_JOB_QUEUE = os.environ.get("LARGE_JOB_QUEUE")
+
+LOGS_GROUP_NAME = "/aws/batch/job"
+
+
+class SystemEnv(AugmentedEnum):
+    AWS_BATCH = "aws-batch"
+    SERVER_LOCAL = "server-local"
+
+
+class ClaudeCodeComputeType(AugmentedEnum):
+    FARGATE = "fargate"
+    EC2 = "ec2"

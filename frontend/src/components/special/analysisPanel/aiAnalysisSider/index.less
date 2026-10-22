@@ -1,0 +1,137 @@
+.rightSider {
+  .dashboard-container {
+    height: 95%;
+    overflow-y: auto;
+
+    .dashboard-title-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      border-bottom: 1px solid #f0f0f0;
+
+      .dashboard-title {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    .dashboard-content {
+      padding: 16px;
+    }
+  }
+}
+
+.dashboard-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5%;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.dashboard-title {
+  font: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 17px 10px 17px 14px;
+}
+
+.dashboard-content {
+  margin-top: 4px;
+  margin: 17px 10px 17px 14px;
+}
+
+.node-name-cell {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: rgba(47, 84, 235, 1);
+  cursor: pointer;
+}
+
+.node-name {
+  color: rgba(47, 84, 235, 1);
+  cursor: pointer;
+}
+
+.code-icon {
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.user-cell {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.normalRow {
+  background-color: transparent;
+}
+
+.highlightRow {
+  background-color: #e6f7ff !important;
+
+  td {
+    background-color: #e6f7ff !important;
+  }
+}
+
+tr.ant-table-row:hover.highlightRow > td {
+  background-color: #e6f7ff !important;
+}
+
+.highlightOldColumn {
+  background-color: #e6f7ff !important;
+  transition: background-color 0.3s ease;
+}
+
+.highlightNewColumn {
+  background-color: #e6f7ff !important;
+  transition: background-color 0.3s ease;
+}
+
+tr.ant-table-row:hover td.highlightOldColumn {
+  background-color: #e6f7ff !important;
+}
+
+tr.ant-table-row:hover td.highlightNewColumn {
+  background-color: #e6f7ff !important;
+}
+
+.disabledRow {
+  background-color: #fafafa !important;
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: #fafafa !important;
+  }
+
+  td {
+    color: #d9d9d9 !important;
+    border-color: #f0f0f0 !important;
+  }
+
+  .ant-btn,
+  .anticon {
+    color: #d9d9d9 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+  }
+
+  .ant-checkbox-wrapper {
+    pointer-events: none;
+
+    .ant-checkbox {
+      .ant-checkbox-inner {
+        border-color: #d9d9d9 !important;
+        background-color: #f5f5f5 !important;
+      }
+    }
+  }
+}

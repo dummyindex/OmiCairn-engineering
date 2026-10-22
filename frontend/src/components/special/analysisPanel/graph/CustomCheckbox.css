@@ -1,0 +1,18 @@
+
+.custom-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #4D9A17;
+  border-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); 
+  transition: all 0.3s; 
+  transform: scale(1.05); 
+}
+
+.data-source-custom-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #364578;
+  border-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); 
+  transition: all 0.3s; 
+  transform: scale(1.05); 
+}

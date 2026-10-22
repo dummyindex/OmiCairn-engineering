@@ -1,0 +1,7 @@
+from constants.common import AugmentedEnum
+
+DEFAULT_VCPUS = 8
+DEFAULT_RAM = 32
+DEFAULT_DISK = 200
+DEFAULT_TIMEOUT = 3600
+DEFAULT_GPU = 0
