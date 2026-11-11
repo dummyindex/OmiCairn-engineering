@@ -1,0 +1,80 @@
+#!/bin/bash
+# ragtool - OmiCairn utility tool for accessing runtime information
+# Usage: ragtool <command> [args]
+
+set -e
+
+# Function to display usage
+usage() {
+    cat << EOF
+ragtool - OmiCairn utility tool
+
+Usage:
+    ragtool <command> [args]
+
+Commands:
+    get_parent_node_folder           Get the parent node folder path
+    load_file <node_x> <file_path>   Load a file from S3 on-demand and return local path
+    help                             Show this help message
+
+Examples:
+    ragtool get_parent_node_folder
+    ragtool load_file node_1 data/counts.h5ad
+    ragtool help
+
+EOF
+    exit 0
+}
+
+# Function to get parent node folder
+get_parent_node_folder() {
+    # Call Python script to get parent node folder
+    python3 /app/scripts/load_parent_folder.py
+}
+
+# Function to load file on-demand from S3
+load_file() {
+    local node_key="$1"
+    local virtual_path="$2"
+    
+    if [ -z "$node_key" ] || [ -z "$virtual_path" ]; then
+        echo "Error: Both node_key and virtual_path are required" >&2
+        echo "Usage: ragtool load_file <node_x> <file_path>" >&2
+        exit 1
+    fi
+    
+    # Call Python script to handle the file loading
+    python3 /app/scripts/load_file.py "$node_key" "$virtual_path"
+}
+
+# Main command router
+main() {
+    if [ $# -eq 0 ]; then
+        echo "Error: No command specified" >&2
+        echo "Use 'ragtool help' for usage information" >&2
+        exit 1
+    fi
+    
+    local command="$1"
+    shift
+    
+    case "$command" in
+        get_parent_node_folder)
+            get_parent_node_folder "$@"
+            ;;
+        load_file)
+            load_file "$@"
+            ;;
+        help|--help|-h)
+            usage
+            ;;
+        *)
+            echo "Error: Unknown command '$command'" >&2
+            echo "Use 'ragtool help' for usage information" >&2
+            exit 1
+            ;;
+    esac
+}
+
+# Entry point
+main "$@"

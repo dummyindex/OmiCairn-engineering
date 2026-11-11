@@ -1,0 +1,310 @@
+.umap-login-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+  overflow: hidden;
+}
+
+.umap-login-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.umap-login-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 48px;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.umap-logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.umap-logo h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #ffffff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+
+.umap-logo p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.umap-form-group {
+  position: relative;
+}
+
+.umap-form-group label {
+  display: block;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.umap-form-group .ant-input,
+.umap-form-group .ant-input-password {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.umap-form-group .ant-input::placeholder,
+.umap-form-group .ant-input-password input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 8px;
+}
+
+.umap-form-group .ant-input:focus,
+.umap-form-group .ant-input-password:focus,
+.umap-form-group .ant-input-focused,
+.umap-form-group .ant-input-password-focused {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.umap-form-group .ant-input-prefix {
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 12px;
+}
+
+.umap-form-group .ant-input-password-icon {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.umap-area-code {
+  .ant-select-selector {
+    border: 2px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    height: 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .ant-select-selection-item {
+    color: white !important;
+    font-weight: 500 !important;
+    line-height: 46px !important;
+  }
+
+  .ant-select-arrow {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  &:hover .ant-select-selector {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+  }
+
+  &.ant-select-focused .ant-select-selector {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+.umap-remember-forgot {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 0.9rem;
+  /* Margin will be controlled inline */
+}
+
+.umap-remember-me {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.umap-remember-me .ant-checkbox-wrapper {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.umap-remember-me .ant-checkbox .ant-checkbox-inner {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.umap-remember-me .ant-checkbox-checked .ant-checkbox-inner {
+  background: #3498db;
+  border-color: #3498db;
+}
+
+.umap-forgot-password {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.umap-forgot-password:hover {
+  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.umap-login-button {
+  width: 100%;
+  height: 56px;
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}
+
+.umap-login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.6);
+  background: linear-gradient(45deg, #3498db, #2980b9);
+}
+
+.umap-divider {
+  text-align: center;
+  margin: 32px 0;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+
+.umap-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.umap-divider span {
+  background: transparent;
+  padding: 0 16px;
+  backdrop-filter: blur(10px);
+}
+
+.umap-signup-link {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-top: 8px; /* Reduced top margin since we control it inline */
+}
+
+.umap-signup-link a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.umap-signup-link a:hover {
+  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.umap-cell-info {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 16px 16px 8px 16px;
+  color: white;
+  font-size: 0.8rem;
+  z-index: 3;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.umap-cell-count {
+  font-weight: 600;
+  color: #3498db;
+}
+
+@media (max-width: 480px) {
+  .umap-login-card {
+    padding: 32px 24px;
+    margin: 20px;
+    max-width: calc(100vw - 40px);
+  }
+
+  .umap-logo {
+    margin-bottom: 32px;
+  }
+
+  .umap-logo h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .umap-cell-info {
+    display: none;
+  }
+}
+
+.umap-login-card .ant-input-affix-wrapper {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 16px;
+
+  .ant-input {
+    padding-left: 6px !important;
+  }
+}
+
+.umap-login-card .ant-input-affix-wrapper:focus,
+.umap-login-card .ant-input-affix-wrapper-focused {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.umap-login-card .ant-select {
+  border-radius: 12px;
+}
+
+.umap-login-card .ant-select .ant-select-selector {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}

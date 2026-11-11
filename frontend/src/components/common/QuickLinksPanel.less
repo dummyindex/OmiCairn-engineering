@@ -1,0 +1,170 @@
+.quickLinksPanel {
+  .panelHeader {
+    margin-bottom: 24px;
+
+    h3 {
+      margin: 0 0 16px 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: #262626;
+    }
+  }
+
+  .categoryTabs {
+    .ant-tabs-tab {
+      font-weight: 500;
+    }
+  }
+
+  .quickLinkCard {
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-color: #40a9ff;
+    }
+
+    .cardContent {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+
+      .cardIcon {
+        font-size: 24px;
+        color: #1890ff;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .cardInfo {
+        flex: 1;
+        min-width: 0;
+
+        .cardTitle {
+          margin: 0 0 8px 0;
+          font-size: 14px;
+          font-weight: 600;
+          color: #262626;
+          line-height: 1.4;
+        }
+
+        .cardDescription {
+          margin: 0 0 12px 0;
+          font-size: 12px;
+          color: #8c8c8c;
+          line-height: 1.4;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .cardMeta {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          flex-wrap: wrap;
+
+          .categoryTag {
+            display: inline-block;
+            padding: 2px 6px;
+            font-size: 10px;
+            font-weight: 500;
+            color: white;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+
+          .requirementTag {
+            display: inline-block;
+            padding: 2px 6px;
+            font-size: 10px;
+            font-weight: 500;
+            color: #8c8c8c;
+            background-color: #f5f5f5;
+            border-radius: 3px;
+            border: 1px solid #d9d9d9;
+          }
+        }
+      }
+    }
+  }
+
+  .emptyState {
+    text-align: center;
+    padding: 40px 20px;
+    color: #8c8c8c;
+
+    p {
+      margin: 0 0 16px 0;
+      font-size: 14px;
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .quickLinksPanel {
+    .quickLinkCard {
+      .cardContent {
+        .cardInfo {
+          .cardTitle {
+            font-size: 13px;
+          }
+
+          .cardDescription {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Dark theme support */
+[data-theme='dark'] {
+  .quickLinksPanel {
+    .panelHeader h3 {
+      color: #f0f0f0;
+    }
+
+    .quickLinkCard {
+      background-color: #1f1f1f;
+      border-color: #303030;
+
+      &:hover {
+        border-color: #40a9ff;
+        background-color: #262626;
+      }
+
+      .cardContent {
+        .cardInfo {
+          .cardTitle {
+            color: #f0f0f0;
+          }
+
+          .cardDescription {
+            color: #8c8c8c;
+          }
+
+          .cardMeta {
+            .requirementTag {
+              color: #8c8c8c;
+              background-color: #262626;
+              border-color: #434343;
+            }
+          }
+        }
+      }
+    }
+
+    .emptyState {
+      color: #8c8c8c;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.modalContent {
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+}
+
+.modalHeader {
+  font: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 0.5em;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.generateButton {
+  background: linear-gradient(180deg, rgba(136, 194, 255, 1) 0%, rgba(33, 73, 255, 1) 100%);
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  font-size: 14px;
+  color: white;
+  transition: background-color 0.3s ease;
+  border-radius: 2px;
+}
+
+.generateButton:hover {
+  background: linear-gradient(180deg, rgba(136, 194, 255, 1) 0%, rgba(50, 100, 255, 1) 100%);
+}
+
+.generateButton:disabled {
+  background: linear-gradient(180deg, rgb(212, 230, 249) 0%, rgb(164, 178, 243) 100%);
+  cursor: not-allowed;
+  color: rgba(255, 255, 255, 0.7);
+}

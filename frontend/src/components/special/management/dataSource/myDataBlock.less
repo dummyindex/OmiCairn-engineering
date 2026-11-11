@@ -1,0 +1,31 @@
+@verticalGap: 15px;
+
+.myDataBlock {
+  .title {
+    margin-bottom: @verticalGap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .titleText {
+      margin-right: 10px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .searchBar {
+      width: 400px;
+      display: flex;
+    }
+  }
+}
+
+.normalRow {
+  box-shadow: none;
+  transition: background-color 1s ease, box-shadow 1s ease;
+}
+
+.highlightRow {
+  background-color: #dde7fb;
+  transition: box-shadow 1s ease, background-color 1s ease-in-out;
+}

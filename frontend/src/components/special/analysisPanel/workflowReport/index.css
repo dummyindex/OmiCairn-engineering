@@ -1,0 +1,13 @@
+.quill {
+  background-color: white;
+  height: 100%;
+}
+
+.quill .ql-toolbar {
+  border: none;
+}
+
+.quill .ql-container {
+  border: none;
+  height: 95%;
+}

@@ -1,0 +1,44 @@
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid rgba(200, 200, 200, 0.8);
+  border-radius: 8px 0 0 8px;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.alphaBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 15vw;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 3px rgba(200, 200, 200, 0.4);
+}
+
+.floatOpenButton {
+  position: absolute;
+  top: 15px;
+  right: 7px;
+  z-index: 1;
+  color: #888;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.floatOpenButton:hover {
+  color: rgba(89, 126, 247, 1);
+  box-shadow: 0 0 6px 3px rgba(89, 126, 247, 0.4);
+}

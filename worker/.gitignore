@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+lib
+bin
+workspace
+*.do-not-sync
+.aws/
+.claude/
+.vscode/
+.idea/
+.env
+.env.*
+!.env.example
+.DS_Store
+.ipynb_checkpoints/
+*.log

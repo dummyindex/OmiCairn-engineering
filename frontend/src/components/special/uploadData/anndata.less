@@ -1,0 +1,129 @@
+.tableContainer {
+  margin: 20px;
+  overflow-x: auto;
+  background-color: rgb(255, 255, 255);
+
+  &.noDragging {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 768px) {
+    margin: 8px;
+
+    :global(.ant-table) {
+      font-size: 12px;
+
+      .ant-table-thead > tr > th {
+        padding: 8px 4px;
+        font-size: 11px;
+      }
+
+      .ant-table-tbody > tr > td {
+        padding: 8px 4px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin: 4px;
+
+    :global(.ant-table-thead) > tr > th {
+      padding: 4px 2px;
+    }
+
+    :global(.ant-table-tbody) > tr > td {
+      padding: 4px 2px;
+    }
+  }
+}
+
+.dragging {
+  border: 2px dashed rgb(172, 172, 172);
+}
+
+.addFilesButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: rgba(47, 84, 235, 1);
+  font-size: 14px;
+  white-space: nowrap;
+
+  &:disabled {
+    color: rgba(47, 84, 235, 0.5);
+    cursor: not-allowed;
+  }
+}
+
+.labelRequired {
+  color: red;
+}
+
+.uploadButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: rgba(47, 84, 235, 1);
+}
+
+.deleteButton:disabled {
+  color: rgba(231, 134, 134, 0.5);
+  cursor: not-allowed;
+}
+
+.moreInfoContainer {
+  margin-left: 20px;
+
+  @media (max-width: 768px) {
+    margin-left: 8px;
+
+    .moreInfoText {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin-left: 4px;
+
+    .moreInfoText {
+      font-size: 11px;
+    }
+  }
+}
+
+.finishButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+
+  @media (max-width: 768px) {
+    margin: 8px;
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    margin: 4px;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.finishButton {
+  background: rgba(89, 126, 247, 1);
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  font-size: 14px;
+  color: white;
+  transition: background-color 0.3s ease;
+  border-radius: 2px;
+
+  &:hover {
+    background: rgba(89, 126, 247, 0.8);
+  }
+}

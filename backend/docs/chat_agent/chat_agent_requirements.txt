@@ -1,0 +1,19 @@
+# Chat Agent Dependencies
+# Additional requirements for the Chat Agent functionality
+
+# HTTP client for API communication
+requests>=2.25.0
+
+# Testing framework (if not already included)
+pytest>=6.0.0
+pytest-mock>=3.6.0
+
+# UUID generation (built-in to Python 3.6+)
+# datetime (built-in)
+# json (built-in)
+# subprocess (built-in)
+
+# Database (assuming already included in main requirements)
+# SQLAlchemy>=1.4.0
+# Flask>=2.0.0
+# Flask-RESTful>=0.3.9

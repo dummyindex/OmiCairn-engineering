@@ -1,0 +1,228 @@
+@media only screen and (min-width: 600px) {
+  .main {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  .left {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 67%;
+    height: 100%;
+    background-color: #ffffff;
+  }
+
+  .backOne {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 25vw;
+  }
+
+  .backTwo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 44vw;
+  }
+
+  .right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 33%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #f1f3fd;
+  }
+
+  .phone {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  .login {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+
+  .omicairn {
+    width: 18vw;
+    margin-bottom: 2vh;
+  }
+
+  .inputBox {
+    z-index: 2;
+    width: 35vw;
+  }
+
+  .loginBtn {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42vw;
+    height: 8vh;
+    color: #fff;
+    font-size: 24px;
+    background-color: #597ef7;
+    border: 1px solid #d6d7d8;
+    /* box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.07 ; */
+    border-radius: 8px;
+  }
+
+  .areaCode {
+    width: 7vw;
+  }
+
+  .backgroundImage {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .login {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 100%;
+  }
+
+  .backgroundImage {
+    /* width: 100%;
+      height: 100%; */
+    position: absolute;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .backOne {
+    display: none;
+  }
+
+  .backTwo {
+    display: none;
+  }
+
+  .inputBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+  }
+
+  .omicairn {
+    width: 40vw;
+    margin-bottom: 3.8vh;
+  }
+
+  .areaCode {
+    width: 18vw;
+  }
+
+  .loginBtn {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    height: 5vh;
+    color: #fff;
+    font-size: 16px;
+    background-color: #597ef7;
+    /* box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.07 ; */
+    border-radius: 8px;
+  }
+}
+
+.umap-area-code .ant-select-selector {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+  color: white !important;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.umap-area-code .ant-select-selection-item {
+  color: white !important;
+  font-weight: 600;
+}
+
+.umap-area-code .ant-select-arrow {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.umap-area-code:hover .ant-select-selector {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.umap-area-code.ant-select-focused .ant-select-selector {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Dropdown menu styling */
+.ant-select-dropdown {
+  background: rgba(44, 62, 80, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+}
+
+.ant-select-item {
+  color: white !important;
+}
+
+.ant-select-item:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ant-select-item-option-selected {
+  background: rgba(52, 152, 219, 0.3) !important;
+  color: white !important;
+}

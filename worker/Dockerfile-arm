@@ -1,0 +1,61 @@
+FROM --platform=linux/arm64 ubuntu:22.04
+
+WORKDIR /omicairn
+
+WORKDIR /omicairn/store
+
+WORKDIR /omicairn/code_space
+
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
+
+RUN echo no | dpkg-reconfigure dash
+
+RUN bash
+
+ENV TZ=UTC
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+RUN apt-get update && \
+    apt-get install -y curl && \
+    apt-get install -y jq && \
+    apt-get install -y make && \
+    apt-get install -y libpq-dev && \
+    apt-get install -y build-essential libxml2-dev python3-dev python3-pip zlib1g-dev python3-requests python3-aiohttp python3-venv python3-tk
+RUN apt-get install -y gfortran
+RUN apt-get install -y libopenblas-dev liblapack-dev libatlas-base-dev
+
+COPY requirements-server.txt /omicairn/code_space/requirements-server.txt
+
+RUN pip3 install -r /omicairn/code_space/requirements-server.txt
+
+COPY basis-computation-requirements.txt /omicairn/code_space/basis-computation-requirements.txt
+COPY preset-envs /omicairn/code_space/preset-envs
+
+RUN curl -o miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
+RUN bash miniconda.sh -b -p $HOME/miniconda
+
+ENV MINICONDA_PATH /root/miniconda/bin/conda
+RUN ${MINICONDA_PATH} config --set show_channel_urls yes
+
+RUN apt-get update && apt-get install -y \
+    ca-certificates \
+    gnupg \
+    lsb-release && \
+    mkdir -p /etc/apt/keyrings && \
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg && \
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
+    > /etc/apt/sources.list.d/docker.list && \
+    apt-get update && \
+    apt-get install -y docker-ce-cli && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /omicairn/code_space
+
+COPY . .
+
+WORKDIR /
+
+ENTRYPOINT [ "bash", "/omicairn/code_space/scripts/launch_arm.sh" ]
+
+EXPOSE 80

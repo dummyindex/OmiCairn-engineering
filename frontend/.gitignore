@@ -1,0 +1,16 @@
+/node_modules
+/.env
+/.env.local
+/.umirc.local.ts
+/config/config.local.ts
+/src/.umi
+/src/.umi-production
+/src/.umi-test
+/dist
+.swc
+workspace
+.vscode
+.eslintcache
+.idea
+.DS_Store
+.claude

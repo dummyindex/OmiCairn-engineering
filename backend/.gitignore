@@ -1,0 +1,20 @@
+bin
+lib
+workspace
+.vscode
+.idea
+__pycache__/
+*.pyc
+*.do-not-sync
+.DS_Store
+# secrets / local config
+.aws/
+.env
+.env.*
+!.env.example
+.claude/
+# test / coverage output
+htmlcov/
+coverage.xml
+.coverage
+test-results.xml

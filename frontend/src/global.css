@@ -1,0 +1,23 @@
+/* Scrollbar style (height/width and background) */
+::-webkit-scrollbar {
+  width: 6px;
+
+  /* Scrollbar size: width = vertical scrollbar width, height = horizontal scrollbar height */
+  height: 7px;
+  background: rgb(237 237 237 / 80%);
+}
+
+/* Scrollbar track (groove) style */
+::-webkit-scrollbar-track {
+  background: rgb(237 237 237 / 80%);
+  border-radius: 3px;
+}
+
+/* Scrollbar thumb style */
+::-webkit-scrollbar-thumb {
+  height: 10%;
+
+  /* Scrollbar thumb length */
+  background: rgb(200 200 200 / 80%);
+  border-radius: 3px;
+}
